@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plathentic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="leaves">
+        <div class="leaf">🍂</div>
+        <div class="leaf">🍂</div>
+        <div class="leaf">🍂</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍁</div>
+        <div class="leaf">🍁</div>
+        <div class="leaf">🍁</div>
+    </div>
+    <div class="main-header" id="main-header1">
+
+      <a href="lobby.html" class="a-home" id="lobby"> Lobby </a>
+      <a href="about.html" class="a-about" id="about"> About </a>
+      <button id="D-L-M" class="D" onclick="changeBackgroundColor()">
+        Dark Mode
+      </button>
+      <button id="D-L-M2" class="L" onclick="changeBackgroundColor2()">
+        Light Mode
+      </button>
+      <a href="need-help.html" class="need-help-icon">
+          <span class="icon">?</span>
+          <span class="text">Need Help?</span>
+      </a>
+
+        <h1 class="main-title" id="main-title1">Plathentic</h1>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="filters" id="filters1">
+            <div class="filter-category">
+                <h1>Plant Filter</h1>
+                <div class="filter-box">
+                    <input class="search-bar" type="text" id="searchInput" onkeyup="filterPlants()" placeholder="Search for plants...">
+                </div>
+                <div class="filter-grid">
+                    <h3>Color/s</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-button" data-filter="red">Red</button>
+                        <button class="filter-button" data-filter="green">Green</button>
+                        <button class="filter-button" data-filter="yellow">Yellow</button>
+                        <button class="filter-button" data-filter="blue">Blue</button>
+                        <button class="filter-button" data-filter="purple">Purple</button>
+                        <button class="filter-button" data-filter="orange">Orange</button>
+                        <button class="filter-button" data-filter="white">White</button>
+                        <button class="filter-button" data-filter="pink">Pink</button>
+                        <button class="filter-button" data-filter="brown">Brown</button>
+                        <button class="filter-button" data-filter="black">Black</button>
+                    </div>
+                </div>
+                <div class="filter-grid">
+                    <h3>Tissue Structure</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-button" data-filter="vascular">Vascular</button>
+                        <button class="filter-button" data-filter="non-vascular">Non-Vascular</button>
+                    </div>
+                </div>
+                <div class="filter-grid">
+                    <h3>Reproduction</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-button" data-filter="flowering">Flowering</button>
+                        <button class="filter-button" data-filter="non-flowering">Non-Flowering</button>
+                    </div>
+                </div>
+                <div class="filter-grid">
+                    <h3>Leaf Type</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-button" data-filter="broadleaf">Broadleaf</button>
+                        <button class="filter-button" data-filter="needle-like">Needle-like</button>
+                    </div>
+                </div>
+                <div class="filter-grid">
+                    <h3>Growth Form</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-button" data-filter="tree">Tree</button>
+                        <button class="filter-button" data-filter="shrub">Shrub</button>
+                        <button class="filter-button" data-filter="grass">Grass</button>
+                        <button class="filter-button" data-filter="fern">Fern</button>
+                        <button class="filter-button" data-filter="herbaceous">Herbaceous</button>
+                        <button class="filter-button" data-filter="climbing">Climbing</button>
+                        <button class="filter-button" data-filter="creeping">Creeping</button>
+                        <button class="filter-button" data-filter="rosette">Rosette-Forming</button>
+                        <button class="filter-button" data-filter="aquatic">Aquatic</button>
+                        <button class="filter-button" data-filter="succulent">Succulent</button>
+                        <button class="filter-button" data-filter="epiphyte">Epiphyte</button>
+                        <button class="filter-button" data-filter="parasitic">Parasitic</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+      <div id="plantContainer">
+      <div class="plant-card plant1" data-properties="white pink vascular flowering broadleaf shrub"data-url='plant1.html';>
+          <h1 class="bold-letters">A</h1>
+          <h2>Abelia Chinensis</h2>
+          <h5>Chinese Abelia</h5>
+      </div>
+  
+      <div class="plant-card plant2" data-properties=" white pink vascular flowering broadleaf shrub"data-url='plant2.html';>
+          <h2>Abelia Floribunda</h2>
+          <h5>Mountain Abelia</h5>
+      </div>
+  
+      <div class="plant-card plant3" data-properties="brown vascular non-flowering needle-like tree"data-url='plant3.html';>
+          <h2>Abies Alba</h2>
+          <h5>European Silver Fir</h5>
+      </div>
+      
+      <div class="plant-card plant4" data-properties="brown vascular non-flowering needle-like tree"data-url='plant4.html';>
+        <h2>Abies Balsamea</h2>
+        <h5>Balsam Fir</h5>
+    </div>
+
+    <div class="plant-card plant5" data-properties="yellow vascular flowering needle-like tree"data-url='plant5.html';>
+        <h2>Acacia Dealbata</h2>
+        <h5>Silver wattle</h5>
+    </div>
+
+    <div class="plant-card plant6" data-properties="yellow vascular flowering needle-like tree"data-url='plant6.html';>
+        <h2>Acacia Baileyana</h2>
+        <h5>Cootamundra Wattle</h5>
+    </div>
+
+    <div class="plant-card plant7" data-properties="yellow vascular flowering broadleaf tree"data-url='plant7.html';>
+        <h2>Acer Campestre</h2>
+        <h5>Field Maple</h5>
+    </div>
+
+    <div class="plant-card plant8" data-properties="red vascular flowering broadleaf tree"data-url='plant8.html';>
+        <h2>Acer Palmatum</h2>
+        <h5>Japanese Maple</h5>
+    </div>
+    <div class="plant-card plant9" data-properties="white yellow red pink purple vascular flowering broadleaf herbaceous"data-url='plant9.html';>
+        <h2>Achillea Millefolium</h2>
+        <h5>Common Yarrow</h5>
+    </div>
+    <div class="plant-card plant10" data-properties="yellow vascular flowering broadleaf herbaceous"data-url='plant10.html';>
+        <h2>Achillea Filipendulina</h2>
+        <h5>Fernleaf Yarrow</h5>
+    </div>
+    <div class="plant-card plant11" data-properties="blue purple vascular flowering broadleaf herbaceous"data-url='plant11.html';>
+        <h2>Aconitum Napellus</h2>
+        <h5>Monkshood</h5>
+    </div>
+    <div class="plant-card plant12" data-properties="blue purple vascular flowering broadleaf herbaceous"data-url='plant12.html';>
+        <h2>Aconitum Carmichaelii</h2>
+        <h5>Carmichael's Monkshood</h5>
+    </div>
+    <div class="plant-card plant13" data-properties="green yellow vascular flowering broadleaf aquatic"data-url='plant13.html';>
+        <h2>Acorus Calamus</h2>
+        <h5>Sweet Flag</h5>
+    </div>
+    <div class="plant-card plant14" data-properties="green yellow vascular flowering broadleaf aquatic"data-url='plant14.html';>
+        <h2>Acorus Gramineus</h2>
+        <h5>Japanese Sweet Flag</h5>
+    </div>
+    <div class="plant-card plant15" data-properties="blue purple white vascular flowering broadleaf herbaceous"data-url='plant15.html';>
+        <h2>Agapanthus Africanus</h2>
+        <h5>African Lily</h5>
+    </div>
+    <div class="plant-card plant16" data-properties="blue purple white vascular flowering broadleaf herbaceous"data-url='plant16.html';>
+        <h2>Agapanthus Praecox</h2>
+        <h5>Blue Lily</h5>
+    </div>
+    <div class="plant-card plant17" data-properties="green blue yellow vascular flowering broadleaf succulent rosette"data-url='plant17.html';>
+        <h2>Agave Americana</h2>
+        <h5>Century Plant</h5>
+    </div>
+    <div class="plant-card plant18" data-properties="green yellow vascular flowering broadleaf succulent rosette"data-url='plant18.html';>
+        <h2>Agave Attenuata</h2>
+        <h5>Foxtail Agave</h5>
+    </div>
+    <div class="plant-card plant19" data-properties="blue white pink purple vascular flowering broadleaf herbaceous"data-url='plant19.html';>
+        <h2>Ageratum Houstonianum</h2>
+        <h5>Flossflower</h5>
+    </div>
+    <div class="plant-card plant20" data-properties="blue purple white vascular flowering broadleaf herbaceous"data-url='plant20.html';>
+        <h2>Ageratum Conyzoides</h2>
+        <h5>Billygoat-Weed</h5>
+    </div>
+    <div class="plant-card plant21" data-properties="blue purple pink white vascular flowering broadleaf herbaceous"data-url='plant21.html';>
+        <h2>Ajuga Reptans</h2>
+        <h5>Common Bugle</h5>
+    </div>
+    <div class="plant-card plant22" data-properties="blue purple pink white vascular flowering broadleaf herbaceous"data-url='plant22.html';>
+        <h2>Ajuga Genevensis</h2>
+        <h5>Geneva Bugle</h5>
+    </div>
+    <div class="plant-card plant23" data-properties="pink vascular flowering broadleaf radial tree"data-url='plant23.html';>
+        <h2>Albizia Julibrissin</h2>
+        <h5>Persian Silk Tree</h5>
+    </div>
+    <div class="plant-card plant24" data-properties="white yellow vascular flowering broadleaf radial tree" data-url='plant24.html'>
+        <h2>Albizia Lebbeck</h2>
+        <h5>Lebbeck</h5>
+    </div>
+    <div class="plant-card plant25" data-properties="white vascular flowering broadleaf radial bulb" data-url='plant25.html'>
+        <h2>Allium Cepa</h2>
+        <h5>Onion</h5>
+    </div>
+    <div class="plant-card plant26" data-properties="white vascular flowering broadleaf radial bulb" data-url='plant26.html'>
+        <h2>Allium Sativum</h2>
+        <h5>Garlic</h5>
+    </div>
+    <div class="plant-card plant27" data-properties="yellow vascular flowering broadleaf radial succulent" data-url='plant27.html'>
+        <h2>Aloe Vera</h2>
+        <h5>Burn Plant</h5>
+    </div>
+    <div class="plant-card plant28" data-properties="yellow vascular flowering broadleaf radial succulent" data-url='plant28.html'>
+        <h2>Aloe Arborescens</h2>
+        <h5>Candelabra Aloe</h5>
+    </div>
+    <div class="plant-card plant29" data-properties="yellow vascular flowering broadleaf radial herbaceous" data-url='plant29.html'>
+        <h2>Alstroemeria Aurea</h2>
+        <h5>Golden Alstroemeria</h5>
+    </div>
+    <div class="plant-card plant30" data-properties="pink vascular flowering broadleaf radial herbaceous" data-url='plant30.html'>
+        <h2>Alstroemeria Ligtu</h2>
+        <h5>Peruvian Lily</h5>
+    </div>
+    <div class="plant-card plant31" data-properties="red vascular flowering broadleaf radial herbaceous" data-url='plant31.html'>
+        <h2>Amaranthus Caudatus</h2>
+        <h5>Love-Lies-Bleeding</h5>
+    </div>
+    <div class="plant-card plant32" data-properties="red vascular flowering broadleaf radial herbaceous" data-url='plant32.html'>
+        <h2>Amaranthus Cruentus</h2>
+        <h5>Red Amaranth</h5>
+    </div>
+    <div class="plant-card plant33" data-properties="white vascular flowering broadleaf radial tree" data-url='plant33.html'>
+        <h2>Amelanchier Canadensis</h2>
+        <h5>Canadian Serviceberry</h5>
+    </div>
+    <div class="plant-card plant34" data-properties="white vascular flowering broadleaf radial tree" data-url='plant34.html'>
+        <h2>Amelanchier Alnifolia</h2>
+        <h5>Saskatoon Serviceberry</h5>
+    </div>
+    <div class="plant-card plant35" data-properties="purple vascular flowering broadleaf radial herbaceous" data-url='plant35.html'>
+        <h2>Amorphophallus Titanum</h2>
+        <h5>Titan Arum</h5>
+    </div>
+    <div class="plant-card plant36" data-properties="purple vascular flowering broadleaf radial herbaceous" data-url='plant36.html'>
+        <h2>Amorphophallus Konjac</h5>
+    </div>
+    <div class="plant-card plant37" data-properties="white vascular flowering broadleaf radial herbaceous" data-url='plant37.html'>
+        <h2>Anemone Nemorosa</h2>
+        <h5>Wood Anemone</h5>
+    </div>
+    <div class="plant-card plant38" data-properties="red blue white vascular flowering broadleaf radial herbaceous" data-url='plant38.html'>
+        <h2>Anemone Coronaria</h2>
+        <h5>Poppy Anemone</h5>
+    </div>
+    <div class="plant-card plant39" data-properties="yellow vascular flowering broadleaf radial herbaceous" data-url='plant39.html'>
+        <h2>Anethum Graveolens</h5>
+        <h5>Dill</h5>
+    </div>
+    <div class="plant-card plant40" data-properties="white vascular flowering broadleaf radial herbaceous" data-url='plant40.html'>
+        <h2>Angelica Archangelica</h2>
+        <h5>Garden Angelica</h5>
+    </div>
+    <div class="plant-card plant41" data-properties="pink yellow red white vascular flowering broadleaf radial herbaceous" data-url='plant41.html'>
+        <h2>Antirrhinum Majus</h2>
+        <h5>Common Snapdragon</h5>
+    </div>
+    <div class="plant-card plant42" data-properties="blue pink purple white vascular flowering broadleaf radial herbaceous" data-url='plant42.html'>
+        <h2>Aquilegia Vulgaris</h2>
+        <h5>Common Columbine</h5>
+    </div>
+    <div class="plant-card plant43" data-properties="blue pink purple white vascular flowering broadleaf radial herbaceous" data-url='plant43.html'>
+        <h2>Aquilegia Caerulea</h2>
+        <h5>Rocky Mountain Columbine</h5>
+    </div>
+    
+</div>
+      <script>
+          const buttons = document.querySelectorAll('.filter-button');
+          const plantCards = document.querySelectorAll('.plant-card');
+  
+          buttons.forEach(button => {
+              button.addEventListener('click', () => {
+                  // Toggle active class on button
+                  button.classList.toggle('active');
+                  // Get active filters
+                  const activeFilters = Array.from(buttons)
+                      .filter(btn => btn.classList.contains('active'))
+                      .map(btn => btn.dataset.filter);
+  
+                  // Show all plant cards if no filters are active
+                  if (activeFilters.length === 0) {
+                      plantCards.forEach(card => card.classList.remove('hidden'));
+                      return;
+                  }
+  
+                  // Filter plant cards
+                  plantCards.forEach(card => {
+                      const cardProperties = card.dataset.properties.split(' ');
+                      // Check if the card matches all of the active filters
+                      if (activeFilters.every(filter => cardProperties.includes(filter))) {
+                          card.classList.remove('hidden');
+                      } else {
+                          card.classList.add('hidden');
+                      }
+                  });
+              });
+          });
+
+
+
+
+
+
+
+
+
+
+
+        /*DARK MODE*/
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = '#2d362d';
+}
+
+        /*LIGHT MODE*/
+function changeBackgroundColor2() {
+    document.body.style.backgroundColor = '#F0FFF0';
+}
+
+
+
+
+
+
+
+function filterPlants() {
+            let input = document.getElementById('searchInput').value.trim().toLowerCase();
+            let container = document.getElementById('plantContainer');
+            let plants = container.getElementsByClassName('plant-card');
+
+            for (let i = 0; i < plants.length; i++) {
+                let plantName = plants[i].innerText.toLowerCase();
+                if (input && !plantName.includes(input)) {
+                    plants[i].style.display = "none";
+                } else {
+                    plants[i].style.display = ""; // Reset to default display
+                }
+            }
+        }
+
+
+        document.querySelectorAll('.plant-card').forEach(function(card) {
+        card.addEventListener('click', function() {
+            var url = this.getAttribute('data-url');
+            if (url) {
+                window.open(url, '_blank');
+            }
+        });
+    });
+
+
+      </script>
+</body>
+</html>

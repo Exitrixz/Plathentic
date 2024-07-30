@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f3;
+            color: #333;
+        }
+        .plant-card {
+            background-color: #e8f5e9;
+            border: 2px solid #c8e6c9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .plant-card.hidden {
+            display: none;
+        }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filter-category {
+            margin-bottom: 10px;
+        }
+        .filter-category h3 {
+            margin: 5px 0;
+        }
+        .filter-button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #81c784;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        .filter-button.active {
+            background-color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="filters">
+        <div class="filter-category">
+            <h3>Color</h3>
+            <button class="filter-button" data-filter="red">Red</button>
+            <button class="filter-button" data-filter="green">Green</button>
+            <button class="filter-button" data-filter="yellow">Yellow</button>
+        </div>
+        <div class="filter-category">
+            <h3>Branch Type</h3>
+            <button class="filter-button" data-filter="vascular">Vascular</button>
+            <button class="filter-button" data-filter="non-vascular">Non-Vascular</button>
+        </div>
+        <div class="filter-category">
+            <h3>Flowering</h3>
+            <button class="filter-button" data-filter="flowering">Flowering</button>
+            <button class="filter-button" data-filter="non-flowering">Non-Flowering</button>
+        </div>
+    </div>
+
+    <div id="plant1" class="plant-card" data-properties="flowering red vascular">
+        <h2>Plant 1</h2>
+        <p>Flowering, Red, Vascular</p>
+    </div>
+
+    <div id="plant2" class="plant-card" data-properties="non-flowering green non-vascular">
+        <h2>Plant 2</h2>
+        <p>Non-Flowering, Green, Non-Vascular</p>
+    </div>
+
+    <div id="plant3" class="plant-card" data-properties="flowering yellow vascular">
+        <h2>Plant 3</h2>
+        <p>Flowering, Yellow, Vascular</p>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.filter-button');
+        const plantCards = document.querySelectorAll('.plant-card');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Toggle active class on button
+                button.classList.toggle('active');
+                // Get active filters
+                const activeFilters = Array.from(buttons)
+                    .filter(btn => btn.classList.contains('active'))
+                    .map(btn => btn.dataset.filter);
+
+                // Show all plant cards if no filters are active
+                if (activeFilters.length === 0) {
+                    plantCards.forEach(card => card.classList.remove('hidden'));
+                    return;
+                }
+
+                // Filter plant cards
+                plantCards.forEach(card => {
+                    const cardProperties = card.dataset.properties.split(' ');
+                    // Check if the card matches all of the active filters
+                    if (activeFilters.every(filter => cardProperties.includes(filter))) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

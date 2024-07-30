@@ -1,0 +1,787 @@
+body {
+    margin: 0;
+    background-color: #F0FFF0;
+    color: #2E8B57;
+    position: relative;
+}
+html{
+    height: 2000px;
+}
+
+.leaves {
+    position: relative;
+    width: 100%;
+    height: 788px;
+    overflow: hidden;
+}
+
+.leaf {
+    position: absolute;
+    top: -50px;
+    font-size: 2rem;
+    animation: fall linear infinite;
+    user-select: none;
+}
+
+.leaf:nth-child(1) {
+    left: 20%;
+    animation-duration: 5s;
+}
+
+.leaf:nth-child(2) {
+    left: 30%;
+    animation-duration: 7s;
+}
+
+.leaf:nth-child(3) {
+    left: 80%;
+    animation-duration: 6s;
+}
+
+.leaf:nth-child(4) {
+    left: 30%;
+    animation-duration: 9s;
+}
+
+.leaf:nth-child(5) {
+    left: 40%;
+    animation-duration: 5s;
+}
+
+.leaf:nth-child(6) {
+    left: 50%;
+    animation-duration: 6s;
+}
+
+.leaf:nth-child(7) {
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.leaf:nth-child(8) {
+    left: 60%;
+    animation-duration: 4s;
+}
+
+.leaf:nth-child(9) {
+    left: 70%;
+    animation-duration: 10s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(calc(100vh + 50px)) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.main-header {
+    margin: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: #2E8B57;
+    color: #FFFFFF;
+    z-index: 1000;
+    top: 0px;
+    border-bottom: 2px solid #000000;
+    z-index: 80;
+}
+
+.main-title{
+    font-size: 50px;
+    left: 43%;
+    position: absolute;
+    cursor: default;
+    font-family: 'Teko', sans-serif;
+    color: #2e473a;
+    text-shadow: 2px 2px 3px #b5f7cb;
+}
+
+  .need-help-icon {
+    display: flex;
+    align-items: center;
+    background-color: #58b94b;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    text-decoration: none;
+    z-index: 100;
+    right: 2%;
+    user-select: none;
+}
+
+.need-help-icon:hover {
+    background-color: #448d3a;
+    color: rgb(255, 255, 255);
+}
+
+.icon {
+    background-color: white;
+    color: #130312;
+    font-weight: bolder;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    z-index: 100;
+}
+
+.text {
+    font-size: 16px;
+    z-index: 100;
+}
+
+.a-home, .a-about, .a-contact{
+    background-color: #3CB371;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0px 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.3s, opacity 0.3s;
+    padding: 10px 20px;
+    z-index: 100;
+    left: 1.7%;
+    position: relative;
+    user-select: none;
+    border: 2px solid transparent;
+    transition: opacity 0.2s;
+  }
+  .D{
+    background-color: #2e523e;
+    color: #FFFFFF;
+    font-size: 10px;
+    margin: 0px 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.3s, opacity 0.3s;
+    padding: 10px 20px;
+    z-index: 100;
+    left: 1.7%;
+    position: relative;
+    user-select: none;
+    border: 2px solid transparent;
+  }
+  .L{
+    background-color: #b8f1d1;
+    color: #10140e;
+    font-size: 10px;
+    margin: 0px 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.3s, opacity 0.3s;
+    padding: 10px 20px;
+    z-index: 100;
+    left: 1.7%;
+    position: relative;
+    user-select: none;
+    border: 2px solid transparent;
+  }
+  .a-home:hover, .a-about:hover, .a-contact:hover{
+  cursor: pointer;
+  background-color: #256d44;
+  color: #FFFFFF !important;
+  opacity: 80% !important;
+  }
+  .D:hover{
+    border-color: black;
+    opacity: 80% !important;
+    cursor: pointer;
+  }
+  .L:hover{
+    border-color: black;
+    opacity: 80% !important;
+    cursor: pointer;
+  }
+  .s-h:active{
+    background-color: #3faa44;
+    border-color: black;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PLANT CARDS (NO DETAILS)*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.plant-card {
+    background-color: #e8f5e9;
+    border: 2px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -700px;
+    transition: opacity 0.25s;
+    transition: border 0.3s ease;
+    z-index: 6;
+}
+.plant-card:hover{
+    cursor: pointer;
+    border: 2px solid black;
+}
+.plant-card.hidden {
+    display: none;
+}
+.filters {
+    margin-bottom: 20px;
+    position: relative;
+    top: -35px;
+    user-select: none;
+    padding: 20px;
+}
+.filter-box{
+    margin-bottom: 10px;
+}
+.filter-category {
+    position: relative;
+    top: -670px;
+    user-select: none;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.search-bar{
+    background-color: #f0fff1;
+    height: 28px;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 3px solid #ccc;
+}
+.filter-category h3 {
+    margin: 5px 0;
+    user-select: none;
+}
+.filter-button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #3CB371;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #d4ebd1;
+    font-weight: bolder;
+    font-size: 18.5px;
+    transition: opacity 0.2s;
+    transition: background-color 0.2s;
+    transition: border-color 0.2;
+    border: 2px solid transparent;
+    user-select: none;
+    align-items: center;
+    padding: 2px 2px;
+    height: 60px;
+}
+.filter-buttons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.filter-button:hover{
+    opacity: 90%;
+    background-color: #2E8B57;
+    color: #FFFFFF;
+}
+
+.filter-button.active {
+    background-color: #5fe25f;
+    border: 2px solid black;
+}
+
+.bold-letters{
+    font-size: 40px;
+    font-weight: bolder;
+    color: #000800;
+}
+.bold-species{
+    font-size: 31px;
+    font-weight: bolder;
+    color: #000800;
+}
+.plant1{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Abelia-Chinensis.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant2{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Abelia-Floribunda.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant3{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Abies-Alba.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant4{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Abies-Balsamea.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant5{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Acacia-Dealbata.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant6{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Acacia-Baileyana.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant7{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Acer-Campestre.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant8{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Acer-Palmatum.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant9{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Achillea-Millefolium.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant10{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Achillea-Filipendulina.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant11{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Aconitum-Napellus.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant12{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Aconitum-Carmichaelii.jpeg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant13{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Acorus-Calamus.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant14{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Acorus-Gramineus.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant15{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Agapanthus-Africanus.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant16{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Agapanthus-Praecox.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant17{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Agave-Americana.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant18{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Agave-Attenuata.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant19{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Ageratum-Houstonianum.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant20{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Ageratum-Conyzoides.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant21{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Ajuga-Reptans.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant22{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Ajuga-Genevensis.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant23{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Albizia-Julibrissin.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant24{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Albizia-Lebbeck.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant25{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Allium-Cepa.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+
+.plant26{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Allium-Sativum.png');
+    background-position: center;
+    background-size: 100%;
+}
+
+.plant27{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Aloe-Vera.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+
+.plant28{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Aloe-Arborescens.webp');
+    background-position: center;
+    background-size: 100%;
+}
+
+.plant29{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Alstroemeria\ Aurea.jpg');
+    background-position: center;
+    background-size: 100%;
+}.plant30{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Alstroemeria-Ligtu.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant31{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Amaranthus\ Caudatus.png');
+    background-position: center;
+    background-size: 100%;
+}
+.plant32{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Amaranthus-Cruentus.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant33{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Amelanchier-Canadensis.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant34{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Amelanchier-Alnifolia.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant35{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Amorphophallus-Titanum.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant36{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Amorphophallus-Konjac.mpo');
+    background-position: center;
+    background-size: 100%;
+}
+.plant37{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Anemone-Nemorosa.jfif');
+    background-position: center;
+    background-size: 100%;
+}
+.plant38{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Anemone-Coronaria.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant39{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Anethum-Graveolens.webp');
+    background-position: center;
+    background-size: 100%;
+}
+.plant40{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Angelica-Archangelica.avif');
+    background-position: center;
+    background-size: 100%;
+}
+.plant41{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Antirrhinum-Majus.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant42{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Aquilegia-Vulgaris.jpg');
+    background-position: center;
+    background-size: 100%;
+}
+.plant43{
+    margin: 10px;
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(145, 145, 145, 0.3)), 
+    url('Aquilegia-Caerulea.webp');
+    background-position: center;
+    background-size: 100%;
+}
+
+
+
+
+h2{
+    font-family: Arial, sans-serif;
+    color: #000000;
+    font-weight: bolder;
+    font-size: 35px;
+    text-shadow: 
+    -0.2px -0.2px 3px #ffffff,  
+    0.2px -0.2px 3px #ffffffff,
+    -0.2px  0.2px 3px #ffffffff,
+    0.2px  0.2px 3px #ffffffff;
+}
+h5{
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgb(17, 17, 17);
+    
+}
+.return-button{
+    display: inline-block;
+    width: fit-content;
+  padding: 10px 20px;
+  background-color: rgb(174, 255, 154);
+  color: rgb(3, 7, 3);
+  text-decoration: none; 
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.return-button:hover{
+    background-color: #2e7d32;
+    color: rgb(230, 255, 230);
+}
+.bodyplant{
+    font-family: Arial, sans-serif;
+            background-color: #f0f4f3;
+            color: #333;
+}
+.plant-card2 {
+    background-color: #e8f5e9;
+    border: 2px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.plant-card2 h2 {
+    color: #4dbe4d;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px rgba(5, 46, 19, 0.5);
+}
+.plant-image-container {
+    border: 2px solid #c8e6c9;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.plant-card2 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.plant-card2 p {
+    margin: 5px 0;
+}
+.plant-card2 span {
+    font-weight: bold;
+    color: #1b5e20;
+}

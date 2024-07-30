@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .filter-box {
+            margin-bottom: 20px;
+        }
+        .plant-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .plant {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plant Filter</h1>
+    <div class="filter-box">
+        <input type="text" id="searchInput" onkeyup="filterPlants()" placeholder="Search for plants...">
+    </div>
+    <div id="plantContainer" class="plant-container">
+        <div class="plant">Abelia Chinensis</div>
+        <div class="plant">Abelia Floribunda</div>
+        <div class="plant">Rosa Chinensis</div>
+        <div class="plant">Ficus Elastica</div>
+        <div class="plant">Sansevieria Trifasciata</div>
+    </div>
+
+    <script>
+        function filterPlants() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let container = document.getElementById('plantContainer');
+            let plants = container.getElementsByClassName('plant');
+
+            for (let i = 0; i < plants.length; i++) {
+                let plant = plants[i].innerText.toLowerCase();
+                if (plant.includes(input)) {
+                    plants[i].style.display = "block";
+                } else {
+                    plants[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
